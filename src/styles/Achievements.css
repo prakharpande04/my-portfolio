@@ -1,0 +1,35 @@
+.achievements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.achievements h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.achievements-list {
+    width: 80%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.achievement-item h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.achievement-item p {
+    margin: 5px 0 0;
+}

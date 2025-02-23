@@ -31,7 +31,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="logo">
         {/* <img src={myLogo} alt="Logo" />  */}
-        <a href="https://www.fontspace.com/category/cursive">
+        <a href="https://prakhar-pande.vercel.app">
         <img src="https://see.fontimg.com/api/rf5/lg2Bw/N2Y2MjFhMWU4Zjc4NDM5OGFlNTI2ZDBhODIwNjQ1MDAudHRm/UHJha2hhciBQYW5kZQ/feelfree-personal-use-regular.png?r=fs&h=53&w=1000&fg=EB0BFE&bg=FFFFFF&tb=1&s=53" 
         alt="Cursive fonts" /></a>
       </div>
