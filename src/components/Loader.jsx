@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './../styles/Loader.css';
+import loaderlogo from './../assets/loaderlogo.png'; // Adjust the path to your logo file
 
-function Loader() {
+const Loader = () => {
   return (
-    <div>#142434</div>
-  )
-}
+    <div className="loader">
+      <img src={loaderlogo} alt="Logo" className="loader-logo" />
+    </div>
+  );
+};
 
-export default Loader
+export default Loader;
