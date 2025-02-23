@@ -1,20 +1,27 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
+.navbar {
     background-color: darkgray;
-    width: 100%;
-    margin: 10px;
-    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+    align-items: center;
+    width: 100%; /* Ensure the navbar takes the full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays on top of other content */
     box-sizing: border-box;
-    border-radius: 7px;
 }
 
 .navbar-nav {
+    width: 80%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around; /* Center the nav items */
     align-items: center;
+    height: 70px;
+    box-sizing: border-box;
 }
 
 .navbar-item {
@@ -23,7 +30,7 @@
 }
 
 .navbar-item a {
-    color: white;
+    color: red;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -34,3 +41,98 @@
     background-color: #555;
 }
 
+/* hamburger start */
+.hamburger {
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    justify-self: flex-end;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 2em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  /* hamburger end  */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust the height as needed */
+}
+
+@media (max-width: 530px){
+    .hamburger{
+        font-size: 15px;
+    }
+    .hamburger svg{
+        height: 1.5em;
+    }
+
+    .logo img{
+        height: 20px;
+    }
+}
+
+@media (max-width: 830px) {
+    .navbar {
+        justify-content: space-between /* Align hamburger to the left */
+    }
+
+    .navbar-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: darkgray;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .navbar-nav.open {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
