@@ -15,14 +15,21 @@
 .education-list {
     width: 80%;
     list-style-type: none;
-    padding: 0;
+    padding: 20;
+    display: flex;
+    flex-direction: row;;
 }
 
 .education-item {
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
+    margin: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .education-item h2 {
@@ -32,4 +39,10 @@
 
 .education-item p {
     margin: 5px 0 0;
+}
+
+@media (max-width: 530px){
+    .education-list {
+        flex-direction: column;
+    }
 }

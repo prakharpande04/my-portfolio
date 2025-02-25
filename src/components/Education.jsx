@@ -4,17 +4,16 @@ import './../styles/Education.css';
 const Education = () => {
   return (
     <div className="education">
-      <h1>Education</h1>
       <ul className="education-list">
         <li className="education-item">
-          <h2>University Name</h2>
-          <p>Degree, Major</p>
-          <p>Year of Graduation</p>
+          <h2>Shri Ramdeobaba College of Engineering and Management</h2>
+          <p>Undergraduate</p>
+          <p>2022 - 2026</p>
         </li>
         <li className="education-item">
-          <h2>College Name</h2>
-          <p>Degree, Major</p>
-          <p>Year of Graduation</p>
+          <h2>Kendriya Vidyalaya Ajni</h2>
+          <p>AISSCE</p>
+          <p>2020 - 2022</p>
         </li>
         {/* Add more education items as needed */}
       </ul>
