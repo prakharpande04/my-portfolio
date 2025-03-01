@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./../styles/Navbar.css";
 import myLogo from './../assets/image.png';
 
@@ -53,19 +53,19 @@ const Navbar = () => {
 
       <ul className={`navbar-nav ${isOpen ? "open" : ""}`} onClick={handleLinkClick}>
         <li className="navbar-item">
-          <Link to="/">Home</Link>
+          <NavLink to="/" activeClassName="active-link">Home</NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/education">Education</Link>
+          <NavLink to="/education" activeClassName="active-link">Education</NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/experience">Experience</Link>
+          <NavLink to="/experience" activeClassName="active-link">Experience</NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/projects">Projects</Link>
+          <NavLink to="/projects" activeClassName="active-link">Projects</NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/achievements">Achievements</Link>
+          <NavLink to="/achievements" activeClassName="active-link">Achievements</NavLink>
         </li>
       </ul>
     </div>
