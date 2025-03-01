@@ -41,7 +41,7 @@
 .role-title {
   display: inline-block;
   margin-left: 10px;
-  animation: slide 2s ease-in-out infinite;
+  animation: slide 4s ease-in-out infinite;
   font-size: 1.8rem;
   font-weight: bold;
   color: #f1c40f;
